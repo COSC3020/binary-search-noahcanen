@@ -6,7 +6,7 @@ function binarySearch(list, element) {
         var mid = low + Math.floor((high - low) / 2);
         if (list[mid]==element){return mid;}
         if (list[mid] > element){high = mid - 1;}
-        if (list[mid] < element){low = mid + 1;}
+        else{low = mid + 1;}
     }
     return -1;
 }
