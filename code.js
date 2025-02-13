@@ -1,7 +1,12 @@
 function binarySearch(list, element) {
-    for (let i = 0; i < list.length; i++)
+    var low = 0;
+    var high = list.length - 1;
+    while (high >= low) {
     {
-        if (list[i]==element){return i;}
+        var mid = low + Math.floor((high - low) / 2);
+        if (list[mid]==element){return i;}
+        if (list[mid] > element){high = mid - 1;}
+        if (list[mid] < element){low = mid + 1;}
     }
     return -1;
 }
