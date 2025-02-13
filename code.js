@@ -1,4 +1,5 @@
 function binarySearch(list, element) {
+    if (list[0]==element){return 0;}
     var low = 0;
     var high = list.length - 1;
     while (high >= low)
